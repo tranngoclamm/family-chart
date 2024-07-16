@@ -69,7 +69,7 @@ import {Form} from "../../src/view/elements/Form.js"
 function firstNode() {
   var data = JSON.parse(localStorage.getItem('mydata'));
   if(data == null || data.lenght == 0){
-    return [{id: '0', rels: {}, data: {'first name': 'Full', 'last name': "Name", 'birthday': 1970, 'death': 2019,
+    return [{id: '0', rels: {}, data: {'first name': 'Full', 'last name': "Name", 'birthday': "birthday", 'death': "death",
       avatar: 'https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg', gender: "M"}}]
   }
     return data;
