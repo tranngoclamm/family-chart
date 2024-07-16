@@ -45,6 +45,8 @@ import {Form} from "../../src/view/elements/Form.js"
       reactiveVanila.update(store, card_display);
       reactiveVue.update(store, card_display);
       reactiveReact.update(store, card_display);
+      var content = document.getElementById('textarea').value;
+      localStorage.setItem('mydata',content);
     }
 
   view.setCard(Card)
@@ -63,11 +65,13 @@ import {Form} from "../../src/view/elements/Form.js"
   }
 })();
 
+// function firstNode() {
+//   return [{id: '0', rels: {}, data: {'first name': 'Name', 'last name': "Surname", 'birthday': 1970, 'death': 2019,
+//       avatar: 'https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg', gender: "M"}}]
+// }
 function firstNode() {
-  return [{id: '0', rels: {}, data: {'first name': 'Name', 'last name': "Surname", 'birthday': 1970, 'death': 2019,
-      avatar: 'https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg', gender: "M"}}]
-}
-
+    return JSON.parse(localStorage.getItem('mydata'));
+  }
 function cardEditParams() {
   return [
     {type: 'text', placeholder: 'first name', key: 'first name'},
