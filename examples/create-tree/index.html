@@ -1,0 +1,286 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>create-tree</title>
+  <link rel="shortcut icon" type="image/svg" href="/examples/logo.svg">
+  <script src="../plugins/materialize.min.js"></script>
+  <link rel="stylesheet" href="../plugins/materialize.min.css">
+  <script src="../plugins/d3.v6.js"></script>
+  <link rel="stylesheet" href="../styles/main.css">
+
+  <style>
+    #FamilyChart {
+      height: 700px;
+      max-height: 90vh;
+      width:100%;
+    }
+    textarea {
+      height: 200px;
+      width:100%;
+    }
+    .p5 {padding: 5px}
+    code {
+      display: block;
+      max-height: 150px;
+      overflow-y: auto;
+      font-size: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+      #FamilyChart {
+        height: 60vh;
+        min-height: 300px;
+      }
+      textarea {
+        height: 30vh;
+        min-height: 200px;
+      }
+    }
+  </style>
+
+</head>
+<body style="">
+<div style="max-width: 1100px; margin: auto">
+  <div class="row">
+    <div class="col s12 m9">
+      <div id="FamilyChart" style="position: relative"><svg class="main_svg">
+        <defs id="f3CardDef">
+          <linearGradient id="fadeGrad">
+            <stop offset="0.9" stop-color="white" stop-opacity="0"></stop>
+            <stop offset=".91" stop-color="white" stop-opacity=".5"></stop>
+            <stop offset="1" stop-color="white" stop-opacity="1"></stop>
+          </linearGradient>
+          <mask id="fade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#fadeGrad)"></rect></mask>
+          <clipPath id="card_clip"><path d="M0,5 Q 0,0 5,0 H215 Q 220,0 220,5 V65 Q 220,70 215,70 H5 Q 0,70 0,65 z"></path></clipPath>
+          <clipPath id="card_text_clip"><rect width="135" height="60"></rect></clipPath>
+          <clipPath id="card_image_clip"><path d="M0,0 Q 0,0 0,0 H60 V60 H0 Q 0,60 0,60 z"></path></clipPath>
+          <clipPath id="card_image_clip_curved"><path d="M0,5 Q 0,0 5,0 H60 V60 H5 Q 0,60 0,55 z"></path></clipPath>
+        </defs>
+      
+          <rect width="666.75" height="558" fill="transparent"></rect>
+          <g class="view" transform="translate(252.7526721461153,233.31969157571825) scale(1.148698354997035)">
+            <g class="links_view"></g>
+            <g class="cards_view"><g class="card_cont" transform="translate(0, 0)" style="opacity: 1;"><g>
+        <g class="card card-male" data-id="0" data-cy="card">
+          <g transform="translate(-110, -35)">
+            
+            
+      <rect width="220" height="70" rx="4" ry="4" class="card-outline card-main-outline "></rect>
+    
+            <g clip-path="url(#card_clip)">
+              
+      <g class="card-body">
+        <rect width="220" height="70" class="card-body-rect"></rect>
+        <g transform="translate(75, 15)">
+          <text clip-path="url(#card_text_clip)">
+            <tspan x="0" dy="14">Name Surname</tspan>
+            <tspan x="0" dy="14" font-size="10">1970 - 2019</tspan>
+          </text>
+          <rect width="135" height="50" style="mask: url(#fade)" class="text-overflow-mask"></rect> 
+        </g>
+      </g>
+    
+              
+      <g style="transform: translate(5px,5px);" class="card_image" clip-path="url(#card_image_clip)">
+        <image href="https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg" height="60" width="60" preserveAspectRatio="xMidYMin slice"></image>      
+      </g>
+    
+              
+      <g transform="translate(174,50)scale(.6)" style="cursor: pointer" class="card_edit pencil_icon">
+        <circle fill="rgba(0,0,0,0)" r="17" cx="8.5" cy="8.5"></circle>
+        <path fill="currentColor" transform="translate(-1.5, -1.5)" d="M19.082,2.123L17.749,0.79c-1.052-1.052-2.766-1.054-3.819,0L1.925,12.794c-0.06,0.06-0.104,0.135-0.127,0.216
+            l-1.778,6.224c-0.05,0.175-0.001,0.363,0.127,0.491c0.095,0.095,0.223,0.146,0.354,0.146c0.046,0,0.092-0.006,0.137-0.02
+            l6.224-1.778c0.082-0.023,0.156-0.066,0.216-0.127L19.082,5.942C20.134,4.89,20.134,3.176,19.082,2.123z M3.076,13.057l9.428-9.428
+            l3.738,3.739l-9.428,9.428L3.076,13.057z M2.566,13.961l3.345,3.344l-4.683,1.339L2.566,13.961z M18.375,5.235L16.95,6.66
+            l-3.738-3.739l1.425-1.425c0.664-0.663,1.741-0.664,2.405,0l1.333,1.333C19.038,3.493,19.038,4.572,18.375,5.235z"></path>
+      </g>
+    
+              
+      <g class="card_add_relative">
+        <g transform="translate(194,50)scale(.13)">
+          <circle r="80" cx="40" cy="40" fill="rgba(0,0,0,0)"></circle>
+          <g transform="translate(-10, -8)">
+            <line x1="10" x2="90" y1="50" y2="50" stroke="currentColor" stroke-width="15" stroke-linecap="round"></line>
+            <line x1="50" x2="50" y1="10" y2="90" stroke="currentColor" stroke-width="15" stroke-linecap="round"></line>
+          </g>
+        </g>
+      </g>
+    
+            </g>
+            
+          </g>
+        </g>
+      </g></g></g>
+          </g>
+          <g style="transform: translate(100%, 100%)">
+            <g class="fit_screen_icon cursor-pointer" style="transform: translate(-50px, -50px); display: none">
+              <rect width="27" height="27" stroke-dasharray="13.5" stroke-dashoffset="6.75" style="stroke:#fff;stroke-width:4px;fill:transparent;"></rect>
+              <circle r="5" cx="13.5" cy="13.5" style="fill:#fff"></circle>          
+            </g>
+          </g>
+        </svg></div>
+    </div>
+    <div class="col s12 m3">
+      <div id="edit_cont" class="card p5">   
+    <h5>Edit</h5>
+    <div class="inputs"><div style="position: relative;">
+        <input type="text" placeholder="field name" value="first name">
+        <span style="position: absolute; font-size: 20px; right: 5px;top:10px;cursor: pointer">×</span>
+      </div><div style="position: relative;">
+        <input type="text" placeholder="field name" value="last name">
+        <span style="position: absolute; font-size: 20px; right: 5px;top:10px;cursor: pointer">×</span>
+      </div><div style="position: relative;">
+        <input type="text" placeholder="field name" value="birthday">
+        <span style="position: absolute; font-size: 20px; right: 5px;top:10px;cursor: pointer">×</span>
+      </div><div style="position: relative;">
+        <input type="text" placeholder="field name" value="">
+        <span style="position: absolute; font-size: 20px; right: 5px;top:10px;cursor: pointer">×</span>
+      </div></div>
+    <button class="btn">add new</button>
+  </div>
+      <div id="display_cont" class="card p5">   
+      <h5>Display</h5>
+      <div class="inputs"><div style="position: relative;">
+          <input type="text" placeholder="label" value="{first name} {last name}">
+        </div><div style="position: relative;">
+          <input type="text" placeholder="label" value="{birthday}">
+        </div></div>
+    </div>
+    </div>
+    <div class="col m12">
+      <h5>Data</h5>
+      <div class="card p5">
+        <textarea id="textarea"></textarea>
+        <button class="btn" id="update_btn">UPDATE CHART</button>
+      </div>
+      <h5>family-chart.css</h5>
+      <div class="card p5">
+        <pre><code id="family-chart-css">.f3 {<br>    height: 700px;<br>    max-height: calc(100vh - 80px);<br>    width: 900px;<br>    max-width: 100%;<br>    margin: auto;<br>    position: relative;<br>  }<br>  <br>  .f3 .cursor-pointer {<br>    cursor: pointer;<br>  }<br>  .f3 svg.main_svg {<br>    width: 100%;<br>    height: 100%;<br>    background-color: #3b5560;<br>    color: #3b5560;<br>  }<br>  .f3 svg.main_svg text {<br>    fill: currentColor;<br>  }<br>  .f3 rect.card-female, .f3 .card-female .card-body-rect, .f3 .card-female .text-overflow-mask {<br>    fill: lightpink;<br>  }<br>  .f3 rect.card-male, .f3 .card-male .card-body-rect, .f3 .card-male .text-overflow-mask {<br>    fill: lightblue;<br>  }<br>  .f3 .card-genderless .card-body-rect, .f3 .card-genderless .text-overflow-mask {<br>    fill: lightgray;<br>  }<br>  .f3 .card_add .card-body-rect {<br>    fill: #3b5560;<br>    stroke-width: 4px;<br>    stroke: #fff;<br>    cursor: pointer;<br>  }<br>  .f3 g.card_add text {<br>    fill: #fff;<br>  }<br>  .f3 .card-main {<br>    stroke: #000;<br>  }<br>  .f3 .card_family_tree rect {<br>    transition: 0.3s;<br>  }<br>  .f3 .card_family_tree:hover rect {<br>    transform: scale(1.1);<br>  }<br>  .f3 .card_add_relative {<br>    cursor: pointer;<br>    color: #fff;<br>    transition: 0.3s;<br>  }<br>  .f3 .card_add_relative circle {<br>    fill: rgba(0, 0, 0, 0);<br>  }<br>  .f3 .card_add_relative:hover {<br>    color: black;<br>  }<br>  .f3 .card_edit.pencil_icon {<br>    color: #fff;<br>    transition: 0.3s;<br>  }<br>  .f3 .card_edit.pencil_icon:hover {<br>    color: black;<br>  }<br>  .f3 .card_break_link, .f3 .link_upper, .f3 .link_lower, .f3 .link_particles {<br>    transform-origin: 50% 50%;<br>    transition: 1s;<br>  }<br>  .f3 .card_break_link {<br>    color: #fff;<br>  }<br>  .f3 .card_break_link.closed .link_upper {<br>    transform: translate(-140.5px, 655.6px);<br>  }<br>  .f3 .card_break_link.closed .link_upper g {<br>    transform: rotate(-58deg);<br>  }<br>  .f3 .card_break_link.closed .link_particles {<br>    transform: scale(0);<br>  }<br>  .f3 .input-field input {<br>    height: 2.5rem !important;<br>  }<br>  .f3 .input-field &gt; label:not(.label-icon).active {<br>    -webkit-transform: translateY(-8px) scale(0.8);<br>    transform: translateY(-8px) scale(0.8);<br>  }</code></pre>
+      </div>
+      <h5>Vanila</h5>
+      <div class="card p5">
+        <pre><code id="ReactiveVanila"><br>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en"&gt;<br>&lt;head&gt;<br>  &lt;meta charset="UTF-8"&gt;<br>  &lt;meta name="viewport" content="width=device-width,initial-scale=1.0" /&gt;<br>  &lt;title&gt;my-family-chart&lt;/title&gt;<br>  &lt;script src="https://unpkg.com/d3@6"&gt;&lt;/script&gt;<br>  &lt;script src="https://unpkg.com/family-chart"&gt;&lt;/script&gt;<br>  &lt;link rel="stylesheet" href="./family-chart.css"&gt;  &lt;!-- create file 'family-chart.css' in same directory, copy/paste css from examples/create-tree --&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>  &lt;div id="FamilyChart" class="f3"&gt;&lt;/div&gt;<br>  &lt;script type="module"&gt;<br>    <br>    const store = f3.createStore({<br>        data: data(),<br>        node_separation: 250,<br>        level_separation: 150<br>      }),<br>      view = f3.d3AnimationView({<br>        store,<br>        cont: document.querySelector("#FamilyChart")<br>      }),<br>      Card = f3.elements.Card({<br>        store,<br>        svg: view.svg,<br>        card_dim: {w:220,h:70,text_x:75,text_y:15,img_w:60,img_h:60,img_x:5,img_y:5},<br>        card_display: [d =&gt; `${d.data['first name'] || ''} ${d.data['last name'] || ''}`,d =&gt; `${d.data["birthday"]} - ${d.data["death"]}`],<br>        mini_tree: true,<br>        link_break: false<br>      })<br>  <br>    view.setCard(Card)<br>    store.setOnUpdate(props =&gt; view.update(props || {}))<br>    store.update.tree({initial: true})<br>    <br>    function data() {<br>      return [<br>  {<br>    "id": "0",<br>    "rels": {},<br>    "data": {<br>      "first name": "Name",<br>      "last name": "Surname",<br>      "birthday": "1970",<br>      "avatar": "https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg",<br>      "gender": "M",<br>      "death": "2019"<br>    }<br>  }<br>]<br>    }<br>  <br>  &lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br>    </code></pre>
+      </div>
+      <h5>Vue</h5>
+      <div class="card p5">
+        <pre><code id="ReactiveVue"><br>&lt;template&gt;<br>  &lt;div id="FamilyChart" class="f3"&gt;&lt;/div&gt;<br>&lt;/template&gt;<br><br>&lt;script&gt;<br>import f3 from "family-chart";  // npm i family-chart<br>import './family-chart.css';  // create file 'family-chart.css' in same directory, copy/paste css from examples/create-tree<br>      <br>export default {<br>  name: "FamilyChart",<br>  mounted() {<br>    <br>    const store = f3.createStore({<br>        data: data(),<br>        node_separation: 250,<br>        level_separation: 150<br>      }),<br>      view = f3.d3AnimationView({<br>        store,<br>        cont: document.querySelector("#FamilyChart")<br>      }),<br>      Card = f3.elements.Card({<br>        store,<br>        svg: view.svg,<br>        card_dim: {w:220,h:70,text_x:75,text_y:15,img_w:60,img_h:60,img_x:5,img_y:5},<br>        card_display: [d =&gt; `${d.data['first name'] || ''} ${d.data['last name'] || ''}`,d =&gt; `${d.data["birthday"]} - ${d.data["death"]}`],<br>        mini_tree: true,<br>        link_break: false<br>      })<br>  <br>    view.setCard(Card)<br>    store.setOnUpdate(props =&gt; view.update(props || {}))<br>    store.update.tree({initial: true})<br>    <br>    function data() {<br>      return [<br>  {<br>    "id": "0",<br>    "rels": {},<br>    "data": {<br>      "first name": "Name",<br>      "last name": "Surname",<br>      "birthday": "1970",<br>      "avatar": "https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg",<br>      "gender": "M",<br>      "death": "2019"<br>    }<br>  }<br>]<br>    }<br>  <br>  },<br>};<br>&lt;/script&gt;<br>&lt;style&gt;&lt;/style&gt;<br>    </code></pre>
+      </div>
+      <h5>React</h5>
+      <div class="card p5">
+        <pre><code id="ReactiveReact"><br>import React from "react";<br>import f3 from "family-chart";  // npm i family-chart<br>import './family-chart.css';  // create file 'family-chart.css' in same directory, copy/paste css from examples/create-tree<br><br>export default class FamilyTree extends React.Component {<br>  cont = React.createRef();<br><br>  componentDidMount() {<br>    if (!this.cont.current) return;<br>    <br>    const store = f3.createStore({<br>        data: data(),<br>        node_separation: 250,<br>        level_separation: 150<br>      }),<br>      view = f3.d3AnimationView({<br>        store,<br>        cont: document.querySelector("#FamilyChart")<br>      }),<br>      Card = f3.elements.Card({<br>        store,<br>        svg: view.svg,<br>        card_dim: {w:220,h:70,text_x:75,text_y:15,img_w:60,img_h:60,img_x:5,img_y:5},<br>        card_display: [d =&gt; `${d.data['first name'] || ''} ${d.data['last name'] || ''}`,d =&gt; `${d.data["birthday"]} - ${d.data["death"]}`],<br>        mini_tree: true,<br>        link_break: false<br>      })<br>  <br>    view.setCard(Card)<br>    store.setOnUpdate(props =&gt; view.update(props || {}))<br>    store.update.tree({initial: true})<br>    <br>    function data() {<br>      return [<br>  {<br>    "id": "0",<br>    "rels": {},<br>    "data": {<br>      "first name": "Name",<br>      "last name": "Surname",<br>      "birthday": "1970",<br>      "avatar": "https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg",<br>      "gender": "M",<br>      "death": "2019"<br>    }<br>  }<br>]<br>    }<br>  <br>  }<br><br>  render() {<br>    return &lt;div className="f3" id="FamilyChart" ref={this.cont}&gt;&lt;/div&gt;;<br>  }<br>}<br>    </code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="form_modal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 0; top: 4%; transform: scaleX(0.8) scaleY(0.8);">
+        <div class="modal-content">
+          <form>
+            <div>
+              <div style="text-align: left">
+                <span style="display: null; float: right; cursor: pointer" class="red-text delete">delete</span>
+              </div>
+              <div>
+                <label><input type="radio" name="gender" value="M" checked=""><span>male</span></label><br>
+                <label><input type="radio" name="gender" value="F"><span>female</span></label><br>
+              </div>
+            </div>
+            <input type="text" name="first name" placeholder="first name" value="Name">
+<input type="text" name="last name" placeholder="last name" value="Surname">
+<input type="text" name="birthday" placeholder="birthday" value="1970">
+<input type="text" name="avatar" placeholder="avatar" value="https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg">
+<input type="text" name="death" placeholder="death" value="20">
+            
+            <br><br>
+            <div style="text-align: center">
+              <button type="submit" class="btn">submit</button>
+            </div>
+          </form>
+        </div>
+      </div><div class="selection_bubble_root" style="display: none;"></div><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script src="create-tree.js" type="module"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.body.appendChild(document.createElement("div"))
+    modal.setAttribute("id", "form_modal")
+    modal.setAttribute("class", "modal")
+    M.Modal.init(modal, {});
+  });
+</script>
+
+<div id="form_modal" class="modal" tabindex="0"></div><div class="selection_bubble_root" style="display: none;"></div><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<div id="form_modal" class="modal" tabindex="0"></div><div class="selection_bubble_root" style="display: none;"></div></body></html>
