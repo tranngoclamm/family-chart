@@ -65,12 +65,14 @@ import {Form} from "../../src/view/elements/Form.js"
   }
 })();
 
-// function firstNode() {
-//   return [{id: '0', rels: {}, data: {'first name': 'Name', 'last name': "Surname", 'birthday': 1970, 'death': 2019,
-//       avatar: 'https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg', gender: "M"}}]
-// }
+
 function firstNode() {
-    return JSON.parse(localStorage.getItem('mydata'));
+  var data = JSON.parse(localStorage.getItem('mydata'));
+  if(data == null || data.lenght == 0){
+    return [{id: '0', rels: {}, data: {'first name': 'Full', 'last name': "Name", 'birthday': 1970, 'death': 2019,
+      avatar: 'https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg', gender: "M"}}]
+  }
+    return data;
   }
 function cardEditParams() {
   return [
