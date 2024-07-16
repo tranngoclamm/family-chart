@@ -10,7 +10,6 @@
 
   <style>
     #FamilyChart {
-      height: 700px;
       max-height: 90vh;
       width:100%;
     }
@@ -39,9 +38,9 @@
 
 </head>
 <body style="">
-<div style="max-width: 1100px; margin: auto">
+<div style="margin: auto">
   <div class="row">
-    <div class="col s12 m9">
+    <div>
       <div id="FamilyChart" style="position: relative"><svg class="main_svg">
         <defs id="f3CardDef">
           <linearGradient id="fadeGrad">
@@ -119,7 +118,7 @@
           </g>
         </svg></div>
     </div>
-    <div class="col s12 m3">
+    <div hidden class="col s12 m3">
       <div id="edit_cont" class="card p5">   
     <h5>Edit</h5>
     <div class="inputs"><div style="position: relative;">
@@ -146,7 +145,7 @@
         </div></div>
     </div>
     </div>
-    <div class="col m12">
+    <div hidden class="col m12">
       <h5>Data</h5>
       <div class="card p5">
         <textarea id="textarea"></textarea>
